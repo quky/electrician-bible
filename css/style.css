@@ -873,3 +873,126 @@ a {
 .about-card .google-play-link {
   margin-top: 20px;
 }
+
+/* FINAL MOBILE FIXES */
+
+@media (max-width: 800px) {
+
+  /* Reliable hamburger icon across Chrome, Brave, etc. */
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    color: #172033;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle::before {
+    content: "\2630";
+    display: block;
+  }
+
+  .mobile-menu-toggle.is-open::before {
+    content: "\00D7";
+    font-size: 36px;
+  }
+
+
+  /* Mobile navigation */
+
+  .nav-container {
+    position: relative;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 16px;
+    background: #ffffff;
+    border-top: 1px solid #e6e9ef;
+    border-bottom: 1px solid #e6e9ef;
+    box-shadow: 0 14px 24px rgba(16, 24, 40, 0.10);
+    z-index: 1000;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 13px 6px;
+    border-bottom: 1px solid #edf0f4;
+  }
+
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* About page — force one column on phones */
+
+  .about-section {
+    padding: 70px 0;
+    overflow-x: hidden;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .about-card {
+    width: 100%;
+    min-width: 0;
+    padding: 24px;
+  }
+
+
+  /* Support page */
+
+  .support-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  /* Features */
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  /* Screenshot gallery */
+
+  .screenshots-grid,
+  .screenshots-grid-large {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* END FINAL MOBILE FIXES */
