@@ -996,3 +996,45 @@ a {
 }
 
 /* END FINAL MOBILE FIXES */
+
+/* ABOUT MOBILE HARD FIX */
+
+@media (max-width: 800px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .about-section .container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+
+  .about-section .about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+    margin: 0 auto !important;
+  }
+
+  .about-section .about-card {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 24px !important;
+  }
+
+  .about-section .about-card h3,
+  .about-section .about-card p {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* END ABOUT MOBILE HARD FIX */
